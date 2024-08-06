@@ -1,6 +1,6 @@
 #include "pdfreader.h"
 
-void PDFReader::loadPDFFIle(const std::string& filePath) {
+void PDFReader::loadPDFFile(const std::string& filePath) {
     m_fileStream.open(filePath);
 
     if (!m_fileStream) {

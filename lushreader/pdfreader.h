@@ -5,7 +5,7 @@
 
 class PDFReader {
     public:
-        void loadPDFFIle(const std::string& filePath);
+        void loadPDFFile(const std::string& filePath);
         static bool isPDFFilePath(std::string_view possibleFilePath); 
     private:
         std::ifstream m_fileStream{};
