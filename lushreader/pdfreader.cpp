@@ -1,6 +1,10 @@
 #include "pdfreader.h"
 
+#include <fstream>
+#include <print>
 #include <regex>
+#include <string>
+#include <string_view>
 
 void PDFReader::loadPDFFile(const std::string& filePath) {
     m_fileStream.open(filePath);
