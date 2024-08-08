@@ -1,3 +1,6 @@
+#ifndef PDFREADER_H
+#define PDFREADER_H
+
 #include <fstream>
 #include <print>
 #include <string>
@@ -12,3 +15,4 @@ class PDFReader {
         std::ifstream m_fileStream{};
         std::string m_headerVersion{};
 };
+#endif
