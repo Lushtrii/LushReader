@@ -13,6 +13,8 @@ FetchContent_Declare(
   GIT_TAG               ff233bdd4cac0a0bf6e5cd45bda3406814cb2796
 )
 
+FetchContent_MakeAvailable(googletest)
+
 add_compile_options(
     -Wall
     -Weffc++
