@@ -6,9 +6,7 @@ int main(int argc, char *argv[]) {
         std::println("Proper usage: {} $filePath", argv[0]);
     }
 
-    PDFReader reader{};
-    reader.loadPDFFile(argv[1]);
-    reader.readHeader();
+    PDFReader reader{argv[1]};
 
     return 0;
 }

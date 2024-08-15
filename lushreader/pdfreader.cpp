@@ -6,6 +6,12 @@
 #include <string>
 #include <string_view>
 
+PDFReader::PDFReader(const std::string& filePath) {
+    PDFReader::loadPDFFile(filePath);
+    PDFReader::readHeader();
+
+}
+
 void PDFReader::loadPDFFile(const std::string& filePath) {
     m_fileStream.open(filePath);
 

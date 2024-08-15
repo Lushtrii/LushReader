@@ -7,6 +7,8 @@
 
 class PDFReader {
     public:
+        PDFReader() = default;
+        explicit PDFReader(const std::string& filePath);
         void loadPDFFile(const std::string& filePath);
         void readHeader();
         static bool isPDFFilePath(std::string_view possibleFilePath); 
