@@ -15,13 +15,5 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-add_compile_options(
-    -Wall
-    -Weffc++
-    -Wextra
-    -Wconversion
-    -Wsign-conversion
-    -Werror
-)
-
 add_subdirectory(lushreader)
+add_subdirectory(tests)
