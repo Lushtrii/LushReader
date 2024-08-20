@@ -1,0 +1,5 @@
+enable_testing()
+add_executable (pdfreader_test pdfreader_test.cpp)
+target_link_libraries(pdfreader_test lushreader GTest::gtest_main)
+include(GoogleTest)
+gtest_discover_tests(pdfreader_test)
