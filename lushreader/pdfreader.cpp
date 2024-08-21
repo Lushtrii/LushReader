@@ -24,6 +24,7 @@ void PDFReader::readHeader() {
     constexpr int headerSize{8};
     char header[headerSize]{""};
     m_fileStream.read(header, headerSize);
+    m_streamPos += headerSize;
 
     std::cmatch match{};
     if (!std::regex_match(header, match, std::regex("%PDF-(1.[1-7])"))) {
