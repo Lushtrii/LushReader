@@ -24,6 +24,10 @@ TEST_F(PDFReaderTest, FileProperlyLoads) {
 }
 
 TEST_F(PDFReaderTest, ReadsHeaderProperly) {
-    EXPECT_EQ(reader.getHeader(), "1.6");
+    emptyReader.loadPDFFile(testPDFFilePath);
+    EXPECT_EQ(emptyReader.getStreamPos(), 0);
+    emptyReader.readHeader();
+    EXPECT_EQ(emptyReader.getHeader(), "1.6");
+    int headerLineSize{8};
+    EXPECT_EQ(reader.getStreamPos(), headerLineSize);
 }
-
