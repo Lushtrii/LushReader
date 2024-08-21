@@ -24,6 +24,6 @@ TEST_F(PDFReaderTest, FileProperlyLoads) {
 }
 
 TEST_F(PDFReaderTest, ReadsHeaderProperly) {
-    EXPECT_EQ(reader.getHeader(), "1.5");
+    EXPECT_EQ(reader.getHeader(), "1.6");
 }
 
