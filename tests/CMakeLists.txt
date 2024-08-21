@@ -1,4 +1,5 @@
 enable_testing()
+configure_file(test.pdf ${CMAKE_CURRENT_BINARY_DIR}/test.pdf COPYONLY)
 add_executable (pdfreader_test pdfreader_test.cpp)
 target_link_libraries(pdfreader_test lushreader GTest::gtest_main)
 include(GoogleTest)
