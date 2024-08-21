@@ -17,3 +17,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_subdirectory(lushreader)
 add_subdirectory(tests)
+
+enable_testing()
+add_test(NAME PDFReaderTest COMMAND pdfreader_test WORKING_DIRECTORY
+    ${CMAKE_CURRENT_BINARY_DIR}/tests)
