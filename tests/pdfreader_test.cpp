@@ -29,5 +29,34 @@ TEST_F(PDFReaderTest, ReadsHeaderProperly) {
     emptyReader.readHeader();
     EXPECT_EQ(emptyReader.getHeader(), "1.6");
     int headerLineSize{8};
-    EXPECT_EQ(reader.getStreamPos(), headerLineSize);
+    EXPECT_EQ(emptyReader.getStreamPos(), headerLineSize);
 }
+
+TEST_F(PDFReaderTest, ReadXrefOffsetProperly) {
+    EXPECT_EQ(reader.getXrefOffset(), 61919303);
+}
+
+TEST_F(PDFReaderTest, ReadTrailerProperly) {
+    GTEST_SKIP();
+}
+
+TEST_F(PDFReaderTest, IgnoresInvalidObj) {
+    GTEST_SKIP();
+}
+
+TEST_F(PDFReaderTest, ParseHexString) {
+    GTEST_SKIP();
+}
+
+TEST_F(PDFReaderTest, ParseNameObject) {
+    GTEST_SKIP();
+}
+
+TEST_F(PDFReaderTest, ParseDictionaryObject) {
+    GTEST_SKIP();
+}
+
+TEST_F(PDFReaderTest, ParseArrayObject) {
+    GTEST_SKIP();
+}
+
